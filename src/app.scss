@@ -1,0 +1,22 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px); // this is subtracting the height of our topbar (70px) from 100% of screen
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-snap-type: y mandatory; // makes scroll snap to each component
+        scrollbar-width: none; // this hides the scroll bar for firefox
+        &::-webkit-scrollbar{ // this hides the scroll bar for chrome, safari
+            display: none;
+        }
+
+        > *{ // for each element in sections class
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start; // makes scroll snap to each component
+        }
+    }
+}
