@@ -7,6 +7,7 @@
         background-color: lightsalmon;
         position: relative;
         top: 70px;
+        scroll-behavior: smooth; // this makes redirecting on the page look smoother and a little slower
         scroll-snap-type: y mandatory; // makes scroll snap to each component
         scrollbar-width: none; // this hides the scroll bar for firefox
         &::-webkit-scrollbar{ // this hides the scroll bar for chrome, safari

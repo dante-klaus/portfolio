@@ -1,8 +1,87 @@
-.topbar{
-    width: 100%;
-    height: 70px;
-    background-color: #15023a;
-    position: fixed;
-    top: 0; 
-    z-index: 2; // specifies stack order, greater value elements will be in front of lower valued elements
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: $mainColor; // color to be inherited
+  position: fixed;
+  top: 0;
+  z-index: 2; // specifies stack order, greater value elements will be in front of lower valued elements
+  transition: all 1s ease; // color transition is smoother
+
+  .wrapper {
+    padding: 5px 30px; // top to bottom 5px, left to right 30px
+    display: flex; // whatever written will be horizontal versus vertical
+    align-items: center; // this ensures that the items are aligned
+    justify-content: space-between; // this evenly distributes the items
+
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        font-size: 40px;
+        font-weight: 700px;
+        text-decoration: none;
+        color: inherit; // inherit color from parent
+        margin-right: 40px;
+      }
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+        .icon {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+
+        span {
+          font-style: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .right{
+
+        .hamburger{
+            width: 32px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left; // ensures the child rotates from left instead of center
+                transition: all 1s ease; // transform will happen after 2 seconds
+            }
+        }
+    }
+  }
+
+  &.active{
+      background-color: $mainColor;
+      color: white;
+
+      .hamburger{
+          span{ // each small line
+            &:first-child{
+                background-color: white;
+                transform: rotate(45deg);
+            }
+            &:nth-child(2){
+                opacity: 0; // this will hide the second child
+            }
+            &:last-child{
+                background-color: white;
+                transform: rotate(-45deg);
+            }
+          }
+      }
+  }
 }
