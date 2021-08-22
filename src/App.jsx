@@ -5,6 +5,7 @@ import Testimonials from './components/testimonials/Testimonials';
 import Topbar from './components/topbar/Topbar';
 import Works from './components/works/Works';
 import Contact from './components/contact/Contact';
+import Menu from './components/menu/Menu';
 import "./app.scss";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Topbar openMenu={openMenu} setOpenMenu={setOpenMenu}/> 
+      <Menu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
       <div className="sections">
         <Intro/>
         <Portfolio/>

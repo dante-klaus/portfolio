@@ -7,7 +7,7 @@
   color: $mainColor; // color to be inherited
   position: fixed;
   top: 0;
-  z-index: 2; // specifies stack order, greater value elements will be in front of lower valued elements
+  z-index: 3; // specifies stack order, greater value elements will be in front of lower valued elements
   transition: all 1s ease; // color transition is smoother
 
   .wrapper {
