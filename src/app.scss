@@ -1,10 +1,11 @@
+@import "global.scss";
 .app{
     height: 100vh;
 
     .sections{
         width: 100%;
         height: calc(100vh - 70px); // this is subtracting the height of our topbar (70px) from 100% of screen
-        background-color: lightsalmon;
+        background-color: white;
         position: relative;
         top: 70px;
         scroll-behavior: smooth; // this makes redirecting on the page look smoother and a little slower
@@ -12,6 +13,10 @@
         scrollbar-width: none; // this hides the scroll bar for firefox
         &::-webkit-scrollbar{ // this hides the scroll bar for chrome, safari
             display: none;
+        }
+        @include mobile{
+            scroll-behavior: auto;
+            scroll-snap-type: none;
         }
 
         > *{ // for each element in sections class

@@ -21,15 +21,22 @@
       align-items: center;
       .logo {
         font-size: 40px;
-        font-weight: 700px;
+        font-weight: 700;
         text-decoration: none;
         color: inherit; // inherit color from parent
         margin-right: 40px;
+        @include mobile{
+          font-size: 32px;
+        }
       }
       .itemContainer {
         display: flex;
         align-items: center;
         margin-left: 30px;
+
+        @include mobile{
+          display: none;
+        }
 
         .icon {
           font-size: 18px;
