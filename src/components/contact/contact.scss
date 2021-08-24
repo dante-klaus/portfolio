@@ -8,14 +8,6 @@
     flex-direction: column;
   }
 
-  .left {
-    flex: 1;
-    overflow: hidden;
-
-    img {
-      height: 100%;
-    }
-  }
   .right {
     flex: 1;
     display: flex;
@@ -61,7 +53,7 @@
         width: 150px;
         height: 30px;
         color: white;
-        background-color: crimson;
+        background-color: $mainColor;
         border: none;
         border-radius: 10px;
         font-weight: 500;
