@@ -2,6 +2,7 @@ export const featuredPortfolio = [
     {
       id: 1,
       title: "ShowHub",
+      webDesc: "I developed a full-stack application accessible on the web, Play Store, and App Store. As the sole developer, I managed all aspects of the application's development, deployment, and maintenance. My responsibilities included creating a seamless user signup process for individuals to register animals for events hosted by other users. Additionally, I implemented a secure payment portal that allowed users to subscribe and make one-time payments using Stripe's API. To enhance payment tracking and management, I integrated webhooks, enabling real-time communication with our server. These efforts significantly contributed to the company's increased profitability.",
       desc: "I developed a full-stack web and mobile app, overseeing all aspects from development to deployment. Key achievements include creating a user-friendly signup process, implementing a secure payment portal with Stripe API, and enhancing payment tracking through webhooks, resulting in increased profitability.",
       tech: "Tech-stack: HTML, CSS, Javascript, EJS, Swift (UIKit), NodeJS, Express, StripeAPI, SQL (Sequelize), AWS cloud",
       img:

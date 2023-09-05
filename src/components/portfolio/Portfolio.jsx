@@ -7,6 +7,7 @@ import {
 
 export default function Portfolio() {
   const [data, setData] = useState([]);
+  const [isMobile] = useState(window.innerWidth <= 768); // Set a threshold for mobile screens
 
   useEffect(() => {
         setData(featuredPortfolio);
@@ -33,7 +34,7 @@ export default function Portfolio() {
             </a>
           </div>
           <div className="goo">
-            <p>{d.desc}</p><br/>
+          <p>{isMobile ? d.desc : d.webDesc}</p><br/>
             <p>{d.tech}</p>
           </div>
       </div>
