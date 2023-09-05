@@ -16,10 +16,11 @@ export default function Portfolio() {
   return (
     <div className="portfolio" id="portfolio">
       <h1>Projects</h1>
+      <br />
+      <h2>Showhub</h2>
       {data.map((d) => (
       <div className="container">
       <div className="title">
-      <h2>{d.title}</h2>
       </div>
           <div className="item">
           <h3>{d.title}</h3>

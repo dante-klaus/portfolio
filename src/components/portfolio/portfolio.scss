@@ -4,30 +4,44 @@
   background-color: white;
 
   h1 {
-    font-size: 50px;
-    padding-left: 40%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */ 
 
-    @include mobile{
-      padding-left: 33%;
-      font-size: 30px;
-    }
+    // @include mobile{
+    //   padding-left: 33%;
+    //   font-size: 30px;
+    // }
+  }
+
+  h2 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */ 
+
+    // @include mobile{
+    //   padding-left: 33%;
+    //   font-size: 20px;
+    // }
   }
 
   .container {
     align-items: center;
     flex-wrap: wrap;
-    overflow: hidden; /* Hide scrollbars and disables scrolling */
+    // overflow: hidden; /* Hide scrollbars and disables scrolling */
     padding: 0px 10px 20px;
     display: flex;
+    justify-content: center; /* Center the items horizontally */
 
     @include mobile{
       padding: 60px 10px 20px;
     }
     h2 {
-      font-size: 20px;
+      font-size: 40px;
+      padding: 10px;
 
       @include mobile{
-        font-size: 16px;
+        font-size: 8px;
       }
     }
     .goo{
@@ -96,6 +110,10 @@
           z-index: 0;
         }
       }
+    }
+    .title {
+      text-align: center; /* Center the title text */
+      /* Other title styling as needed */
     }
   }
 }
